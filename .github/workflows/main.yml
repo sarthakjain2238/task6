@@ -72,7 +72,7 @@ jobs:
         run: docker pull sarthakjain2238/medusa-app:latest
 
       - name: Tag Docker Image
-        run: docker tag gurkasathish/medusa-backend_medusa:latest ${{ env.ECR_REPOSITORY_URL }}:latest
+        run: docker tag sarthakjain2238/medusa-app:latest  ${{ env.ECR_REPOSITORY_URL }}:latest
 
       - name: Push Docker Image to ECR
         run: docker push ${{ env.ECR_REPOSITORY_URL }}:latest
