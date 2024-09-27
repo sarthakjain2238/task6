@@ -69,7 +69,7 @@ jobs:
            aws ecr get-login-password --region ${{ secrets.AWS_REGION }} | docker login --username AWS --password-stdin ${{ env.ECR_REPOSITORY_URL }}
       
       - name: Pull Docker Image from Docker Hub
-        run: docker pull gurkasathish/medusa-backend_medusa:latest
+        run: docker pull sarthakjain2238/medusa-app:latest
 
       - name: Tag Docker Image
         run: docker tag gurkasathish/medusa-backend_medusa:latest ${{ env.ECR_REPOSITORY_URL }}:latest
