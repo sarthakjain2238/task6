@@ -8,7 +8,7 @@ resource "aws_vpc" "main" {
   tags = {
     Name = "medusa-vpc"
   }
-}
+} 
 
 resource "aws_subnet" "public_subnet_1" {
   vpc_id     = aws_vpc.main.id
